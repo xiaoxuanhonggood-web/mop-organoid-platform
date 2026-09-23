@@ -1,0 +1,25 @@
+{
+  "core": ["organoid", "organoids", "organoid model", "patient-derived organoid", "assembloid", "tumoroid", "enteroid", "organ-on-a-chip", "organ-on-chip", "organs-on-chips", "organ chip", "organoid-on-chip", "tissue-on-chip", "microphysiological system", "microphysiological systems", "MPS"],
+  "mpsContext": ["microfluidic", "chip", "microphysiological"],
+  "topics": {
+    "pathogen": {"name":"病原体相互作用", "terms":["pathogen", "host-pathogen", "infection", "infectious disease", "virus", "viral", "bacteria", "bacterial", "fungi", "fungal", "parasite", "microbial infection"]},
+    "drug": {"name":"药物筛选", "terms":["drug screening", "compound screening", "high-throughput screening", "drug response", "therapeutic screening", "pharmacological screening", "drug efficacy", "drug toxicity", "precision medicine", "personalized medicine", "drug sensitivity", "drug resistance", "toxicity", "pharmacology", "antiviral", "antibacterial", "anticancer", "therapeutic testing"]},
+    "ai": {"name":"AI赋能", "terms":["artificial intelligence", "machine learning", "deep learning", "neural network", "computer vision", "foundation model", "digital twin"]}
+  },
+  "pathogens": {
+    "病毒": {"SARS-CoV-2":["sars-cov-2","covid-19"],"Influenza virus":["influenza"],"Norovirus":["norovirus"],"Zika virus":["zika"],"HBV":["hepatitis b","hbv"],"HCV":["hepatitis c","hcv"],"HSV":["herpes simplex","hsv"],"HIV":["human immunodeficiency","hiv"],"Enterovirus":["enterovirus"]},
+    "细菌": {"Salmonella":["salmonella"],"E. coli":["escherichia coli","e. coli"],"Helicobacter pylori":["helicobacter pylori","h. pylori"]},
+    "真菌": {"Candida":["candida"],"Aspergillus":["aspergillus"]},
+    "寄生虫": {"Cryptosporidium":["cryptosporidium"],"Toxoplasma":["toxoplasma"],"Plasmodium":["plasmodium"]}
+  },
+  "facets": {
+    "organ": {"肠道":["intestinal","intestine","gut","enteroid","colonic"],"肺 / 气道":["lung","airway","alveolar"],"肝脏":["liver","hepatic","hepatocyte"],"脑 / 神经":["brain","cerebral","neural","cortical"],"肾脏":["kidney","renal"],"心脏":["cardiac","heart"],"肿瘤":["tumor","tumour","cancer","tumoroid"]},
+    "model": {"类器官":["organoid","enteroid","tumoroid","assembloid"],"器官芯片":["on-chip","on-a-chip","on-chips","organ chip","microphysiological"]},
+    "infectionModel": {"共培养感染模型":["co-culture","coculture"],"气液界面模型":["air-liquid interface"],"微注射模型":["microinjection","microinjected"]},
+    "mechanism": {"免疫应答":["immune response","interferon","innate immunity"],"屏障功能":["barrier"],"病原体侵入":["entry","invasion"],"炎症":["inflammation","inflammatory"]}
+  },
+  "highImpact": {"mode":"any", "minJif":8, "quartiles":["Q1"], "whitelist":["Nature","Science","Cell","Nature Medicine","Nature Biotechnology","Nature Biomedical Engineering","Cell Stem Cell"]},
+  "harvest": {"initialYears":1,"pageSize":1000,"maxPages":100,"crossrefLimit":100,"translationLimit":100},
+  "translation": {"model":"gpt-4.1-mini"},
+  "githubRepository":""
+}
