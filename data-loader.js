@@ -17,6 +17,7 @@ export async function loadSnapshot(progress) {
     requestJson('data.json'), requestJson('settings.json')
   ]);
   if (!snapshot.paperFiles) return [snapshot, settings];
+  const finish = async () => {
   let completed = 0;
   progress(0, snapshot.paperFiles.length);
   const parts = await Promise.all(snapshot.paperFiles.map(async (file, index) => {
@@ -31,5 +32,9 @@ export async function loadSnapshot(progress) {
     return records;
   }));
   snapshot.papers = parts.flat();
+  };
+  if (snapshot.papers?.length) {
+    snapshot.loadRemaining = finish;
+  } else await finish();
   return [snapshot, settings];
 }
