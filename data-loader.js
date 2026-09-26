@@ -1,7 +1,7 @@
 // Load the published snapshot with bounded requests and lossless compression.
 export async function requestJson(url, compressed = false) {
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 45000);
+  const timer = setTimeout(() => controller.abort(), /papers-/.test(url) ? 180000 : 45000);
   try {
     const response = await fetch(url, { signal: controller.signal });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
